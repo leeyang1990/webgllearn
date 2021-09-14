@@ -1,0 +1,33 @@
+{
+  "name": "webgllearn",
+  "version": "1.0.0",
+  "description": "webgl note",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rollup -c",
+    "postbuild": "parcel build 'resources/**/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leeyang1990/webgllearn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leeyang1990/webgllearn/issues"
+  },
+  "homepage": "https://github.com/leeyang1990/webgllearn#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "rollup": "^2.56.3"
+  },
+  "devDependencies": {
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "source": {
+    "./resources/**": "./resources/$1"
+  }
+}
