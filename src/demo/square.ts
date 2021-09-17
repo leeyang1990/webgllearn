@@ -1,4 +1,4 @@
-import { engine } from "./../engine";
+import * as engine from "./../engine";
 var vs = `
 attribute vec4 a_Position;
     void main() {

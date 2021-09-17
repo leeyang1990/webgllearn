@@ -277,7 +277,15 @@
   function distance(a, b) {
     return Math.sqrt(distanceSq(a, b));
   }
-
+  function projection (width, height, depth) {
+    // 注意：这个矩阵翻转了 Y 轴，所以 0 在上方
+    return [
+       2 / width, 0, 0, 0,
+       0, -2 / height, 0, 0,
+       0, 0, 2 / depth, 0,
+      -1, 1, 0, 1,
+    ];
+  }
   /**
    * Makes an identity matrix.
    * @param {Matrix4} [dst] optional matrix to store result
@@ -1460,6 +1468,7 @@
     transformDirection: transformDirection,
     transformNormal: transformNormal,
     setDefaultType: setDefaultType,
+    projection:projection
   };
 
 }));
